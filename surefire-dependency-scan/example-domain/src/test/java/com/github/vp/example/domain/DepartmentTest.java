@@ -1,4 +1,4 @@
-package com.github.vp.example;
+package com.github.vp.example.domain;
 
 import org.junit.Test;
 

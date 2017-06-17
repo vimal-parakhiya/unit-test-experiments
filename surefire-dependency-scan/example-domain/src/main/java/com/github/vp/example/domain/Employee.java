@@ -1,13 +1,16 @@
-package com.github.vp.example;
+package com.github.vp.example.domain;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Created by vimalpar on 14/06/17.
  */
-public class Department {
+public class Employee {
     private String id;
     private String name;
 
-    public Department(String id, String name) {
+    public Employee(String id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -26,16 +29,16 @@ public class Department {
 
         if (o == null || getClass() != o.getClass()) return false;
 
-        Department that = (Department) o;
+        Employee employee = (Employee) o;
 
-        return new org.apache.commons.lang3.builder.EqualsBuilder()
-                .append(id, that.id)
+        return new EqualsBuilder()
+                .append(id, employee.id)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+        return new HashCodeBuilder(17, 37)
                 .append(id)
                 .toHashCode();
     }
